@@ -5,9 +5,14 @@ import userEvent from '@testing-library/user-event';
 
 import Show from './../Show';
 
-test('renders without errors', ()=>{});
+test('renders without errors', ()=>{
+    render(<Show/>)
+});
 
-test('renders Loading component when prop show is null', () => {});
+test('renders Loading component when prop show is null', () => {
+    render(<Show show={null}/>)
+    const loading = screen.queryByText('Fetching Data...')
+});
 
 
 test('renders same number of options seasons are passed in', ()=>{});

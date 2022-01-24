@@ -10,7 +10,7 @@ test("renders without error", () => {
 
 test("renders the summary test passed as prop", ()=>{
     render (<Episode episode={[]}/>)
-    const summary = screen.queryByText(/episode summary/i)
+    const summary = screen.queryAllByText(/episode summary/i)
     // expect(summary).toBeInTheDocument('')
     expect(summary).toBeTruthy();
     expect(summary).toHaveTextContent()
