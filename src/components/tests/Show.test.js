@@ -19,20 +19,19 @@ const showData = {
 }
 
 test('renders without errors', ()=>{
-    render(<Show show={showData}/>)
+    render(<Show show={showData} selectedSeason={'none'}/>)
 });
 
 test('renders Loading component when prop show is null', () => {
     render(<Show show={null}/>)
     const loading = screen.queryByText('Fetching Data...')
   
-    
-  
 });
 
 
 test('renders same number of options seasons are passed in', ()=>{
     render(<Show/>);
+    const options = screen.queryAllByTestId('season-option')
 
 });
 
