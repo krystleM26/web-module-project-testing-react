@@ -10,6 +10,9 @@ test('renders without errors with no props', ()=>{
     render(<Display display={[]}/>)
 });
 
-test('renders Show component when the button is clicked ', ()=>{});
+test('renders Show component when the button is clicked ', ()=>{
+    render(<Display />)
+    const button = screen.queryByRole('button')
+});
 
 test('renders show season options matching your data when the button is clicked', ()=>{});
